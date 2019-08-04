@@ -1,4 +1,4 @@
-package com.example.exchangeconverter.fragment
+package com.example.exchangeconverter.fragment.second
 
 import android.content.Context
 import android.os.Bundle
@@ -10,9 +10,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.exchangeconverter.R
+import com.example.exchangeconverter.fragment.first.FirstFragment
+import com.example.exchangeconverter.fragment.first.MyFirstRecycler
 
-
-class ItemFragment : Fragment() {
+class SecondFragment : Fragment(){
 
     private var columnCount = 1
 
@@ -27,10 +28,10 @@ class ItemFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_currency, container, false)
+        val view = inflater.inflate(R.layout.fragment_all_currency, container, false)
 
         // Set the adapter
         if (view is RecyclerView) {
@@ -39,7 +40,7 @@ class ItemFragment : Fragment() {
                     columnCount <= 1 -> LinearLayoutManager(context)
                     else -> GridLayoutManager(context, columnCount)
                 }
-                adapter = MyItemRecyclerViewAdapter(
+                adapter = MyFirstRecycler(
                         Data()
                 )
             }
@@ -79,10 +80,10 @@ class ItemFragment : Fragment() {
 
         @JvmStatic
         fun newInstance(columnCount: Int) =
-            ItemFragment().apply {
-                arguments = Bundle().apply {
-                    putInt(ARG_COLUMN_COUNT, columnCount)
+                FirstFragment().apply {
+                    arguments = Bundle().apply {
+                        putInt(ARG_COLUMN_COUNT, columnCount)
+                    }
                 }
-            }
     }
 }

@@ -1,4 +1,4 @@
-package com.example.exchangeconverter.fragment
+package com.example.exchangeconverter.fragment.first
 
 
 import android.support.v7.widget.RecyclerView
@@ -9,9 +9,9 @@ import android.widget.TextView
 import com.example.exchangeconverter.R
 import kotlinx.android.synthetic.main.fragment_item.view.*
 
-class MyItemRecyclerViewAdapter(
+class MyFirstRecycler(
         private val mValues: List<String>
-) : RecyclerView.Adapter<MyItemRecyclerViewAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<MyFirstRecycler.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,7 +22,7 @@ class MyItemRecyclerViewAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
-        holder.tv_Current.text = item
+        holder.tv_Currence.text = item
         holder.tv_sell.text = item
 
     }
@@ -30,12 +30,8 @@ class MyItemRecyclerViewAdapter(
     override fun getItemCount(): Int = mValues.size
 
     inner class ViewHolder(val mView: View) : RecyclerView.ViewHolder(mView) {
-        val tv_Current: TextView = mView.tv_current_1
-        val tv_buy: TextView = mView.tv_buy_1
-        val tv_sell: TextView = mView.tv_sell_1
-
-        override fun toString(): kotlin.String {
-            return super.toString() + " '" + tv_sell.text + "'"
-        }
+        val tv_Currence: TextView = mView.tv_currency
+        val tv_buy: TextView = mView.tv_currency_val
+        val tv_sell: TextView = mView.tv_currency_price
     }
 }
