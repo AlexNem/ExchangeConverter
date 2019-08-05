@@ -1,4 +1,4 @@
-package com.example.exchangeconverter.fragment.second
+package com.example.exchangeconverter.ui.fragment.second
 
 import android.content.Context
 import android.os.Bundle
@@ -10,8 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.exchangeconverter.R
-import com.example.exchangeconverter.fragment.first.FirstFragment
-import com.example.exchangeconverter.fragment.first.MyFirstRecycler
+import com.example.exchangeconverter.ui.fragment.first.FirstFragment
+import com.example.exchangeconverter.ui.fragment.first.MyFirstRecycler
 
 class SecondFragment : Fragment(){
 

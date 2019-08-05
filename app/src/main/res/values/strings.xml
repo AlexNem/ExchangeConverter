@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">ExchangeConverter</string>
-    <string name="str_bank_name">Bank name</string>
+    <string name="str_Pryvat_bank">ПриватБанк</string>
     <string name="str_data">01.01.2019</string>
     <string name="decription_data_image">TODO</string>
     <string name="tv_buy">Покупка</string>
     <string name="tv_currency">Валюта</string>
     <string name="tv_sell">Продажа</string>
+    <string name="tv_NBU_bank">НБУ</string>
 </resources>

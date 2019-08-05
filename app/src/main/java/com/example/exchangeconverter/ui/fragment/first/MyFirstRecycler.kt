@@ -1,4 +1,4 @@
-package com.example.exchangeconverter.fragment.first
+package com.example.exchangeconverter.ui.fragment.first
 
 
 import android.support.v7.widget.RecyclerView
@@ -23,7 +23,7 @@ class MyFirstRecycler(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
         holder.tv_Currence.text = item
-        holder.tv_sell.text = item
+
 
     }
 

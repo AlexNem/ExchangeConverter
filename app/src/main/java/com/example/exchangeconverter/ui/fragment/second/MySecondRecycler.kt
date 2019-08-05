@@ -1,4 +1,4 @@
-package com.example.exchangeconverter.fragment.second
+package com.example.exchangeconverter.ui.fragment.second
 
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater

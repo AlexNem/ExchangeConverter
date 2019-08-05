@@ -1,11 +1,11 @@
-package com.example.exchangeconverter.activity
+package com.example.exchangeconverter.ui.activity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import com.example.exchangeconverter.R
-import com.example.exchangeconverter.fragment.first.MyFirstRecycler
-import com.example.exchangeconverter.fragment.second.MySecondRecycler
+import com.example.exchangeconverter.ui.fragment.first.MyFirstRecycler
+import com.example.exchangeconverter.ui.fragment.second.MySecondRecycler
 import kotlinx.android.synthetic.main.fragment_all_currency.*
 import kotlinx.android.synthetic.main.fragment_currency.*
 

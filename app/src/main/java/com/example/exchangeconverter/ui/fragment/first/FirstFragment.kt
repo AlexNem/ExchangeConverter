@@ -1,4 +1,4 @@
-package com.example.exchangeconverter.fragment.first
+package com.example.exchangeconverter.ui.fragment.first
 
 import android.content.Context
 import android.os.Bundle
