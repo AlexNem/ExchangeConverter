@@ -1,8 +1,8 @@
 package com.example.exchangeconverter.ui.activity
 
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.exchangeconverter.R
 import com.example.exchangeconverter.ui.fragment.first.MyFirstRecycler
 import com.example.exchangeconverter.ui.fragment.second.MySecondRecycler
@@ -18,6 +18,11 @@ class MainActivity : AppCompatActivity()
         setFirstRecycler()
         setSecondRecycler()
     }
+
+//    val db = Room.databaseBuilder(
+//        applicationContext,
+//        AppDB::class.java, "currency_list.db"
+//        ).build()
 
     private fun setFirstRecycler(){
         currency_recycler.layoutManager = LinearLayoutManager(this)
