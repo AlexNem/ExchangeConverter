@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.activity.MainActivity">
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".ui.activity.MainActivity">
 
     <include
-        android:id="@+id/include"
-        layout="@layout/fragment_currency" />
+            android:id="@+id/include"
+            layout="@layout/fragment_currency"
+          />
     <!--android:layout_marginTop="?attr/actionBarSize" />-->
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/include">
 
-        <include
+    <include
             android:id="@+id/include2"
-            layout="@layout/fragment_all_currency" />
-
-    </FrameLayout>
+            layout="@layout/fragment_all_currency"
+         />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

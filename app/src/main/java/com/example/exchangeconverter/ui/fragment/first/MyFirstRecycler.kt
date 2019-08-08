@@ -8,10 +8,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exchangeconverter.R
+import com.example.exchangeconverter.db.CurrencyEntity
 import kotlinx.android.synthetic.main.fragment_item.view.*
 
 class MyFirstRecycler(
-        private val mValues: List<String>
+        private val mValues: List<CurrencyEntity>
 ) : RecyclerView.Adapter<MyFirstRecycler.ViewHolder>() {
 
 
@@ -23,7 +24,9 @@ class MyFirstRecycler(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = mValues[position]
-        holder.tv_Currence.text = item
+        holder.tv_Currence.text = item.unicode
+        holder.tv_buy.text = item.buy_price.toString()
+        holder.tv_sell.text = item.sell_price.toString()
 
 
     }

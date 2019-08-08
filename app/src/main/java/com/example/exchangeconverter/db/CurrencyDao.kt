@@ -5,17 +5,20 @@ import androidx.room.*
 @Dao
 interface CurrencyDao {
     @Query("SELECT * From currency_items")
-    fun getAll(): List<DBCurrency>
+    suspend fun getAll(): List<CurrencyEntity>
 
-//    @Query("Select * From currency_items WHERE unicode LIKE unicode")
-//    fun getUnicode(unicode: String): DBCurrency
+    @Query("Select * From currency_items WHERE id = :id")
+    suspend fun getId(id: Int): CurrencyEntity
 
-    @Insert
-    fun insertAll(vararg currency: DBCurrency)
+    @Query("Select * From currency_items WHERE unicode = :unicode")
+    suspend fun getUNICODE(unicode: String): CurrencyEntity
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(currencyEntityList: List<CurrencyEntity>)
 
     @Delete
-    fun delete(currency: DBCurrency)
+    suspend fun delete(currencyEntity: CurrencyEntity)
 
     @Update
-    fun updateAll(vararg currency: DBCurrency)
+    suspend fun updateAll(vararg currencyEntity: CurrencyEntity)
 }
