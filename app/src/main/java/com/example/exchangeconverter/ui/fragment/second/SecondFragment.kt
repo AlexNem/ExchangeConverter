@@ -6,13 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.exchangeconverter.R
 import com.example.exchangeconverter.db.CurrencyEntity
 import com.example.exchangeconverter.ui.fragment.first.FirstFragment
-import com.example.exchangeconverter.ui.fragment.first.MyFirstRecycler
 
 class SecondFragment : Fragment(){
 
@@ -33,19 +29,6 @@ class SecondFragment : Fragment(){
             savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_all_currency, container, false)
-
-        // Set the adapter
-        if (view is RecyclerView) {
-            with(view) {
-                layoutManager = when {
-                    columnCount <= 1 -> LinearLayoutManager(context)
-                    else -> GridLayoutManager(context, columnCount)
-                }
-                adapter = MyFirstRecycler(
-                        Data()
-                )
-            }
-        }
         return view
     }
 

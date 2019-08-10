@@ -25,6 +25,7 @@ class MySecondRecycler(private val mValues: List<CurrencyEntity>)
         holder.tv_currence_val.text = item.coefficient_UAH.toString()
 
 
+
     }
 
     override fun getItemCount(): Int = mValues.size

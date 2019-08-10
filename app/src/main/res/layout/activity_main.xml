@@ -10,7 +10,6 @@
             android:id="@+id/include"
             layout="@layout/fragment_currency"
           />
-    <!--android:layout_marginTop="?attr/actionBarSize" />-->
 
 
     <include
